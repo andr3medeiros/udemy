@@ -1,9 +1,11 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import SearchScreen from './.expo/src/screens/SearchScreen';
+import SearchScreen from './src/screens/SearchScreen';
+import ResultDetail from './src/screens/ResultDetail';
 
 const navigator = createStackNavigator({
-  Search: SearchScreen
+  Search: SearchScreen,
+  ResultDetail: ResultDetail
 }, {
   initialRouteName: 'Search',
   defaultNavigationOptions: {
@@ -11,4 +13,4 @@ const navigator = createStackNavigator({
   }
 });
 
-export default createAppContainer
+export default createAppContainer(navigator);
